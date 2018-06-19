@@ -1,6 +1,2 @@
 # This file contains recursive sources that require this package
-R-DendSer
-R-ROCR
-R-dendextend
 R-gplots
-R-seriation
