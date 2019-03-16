@@ -4,15 +4,13 @@
 #
 Name     : R-caTools
 Version  : 1.17.1.2
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/caTools_1.17.1.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caTools_1.17.1.2.tar.gz
 Summary  : Moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-caTools-lib = %{version}-%{release}
-Requires: R-bitops
-Requires: R-fields
 BuildRequires : R-bitops
 BuildRequires : R-fields
 BuildRequires : buildreq-R
@@ -39,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551929095
+export SOURCE_DATE_EPOCH=1552726414
 
 %install
-export SOURCE_DATE_EPOCH=1551929095
+export SOURCE_DATE_EPOCH=1552726414
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -78,8 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library caTools|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  caTools || :
 
 
 %files
@@ -103,7 +100,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/caTools/help/paths.rds
 /usr/lib64/R/library/caTools/html/00Index.html
 /usr/lib64/R/library/caTools/html/R.css
-/usr/lib64/R/library/caTools/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
