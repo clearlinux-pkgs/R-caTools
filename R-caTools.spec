@@ -4,18 +4,18 @@
 #
 Name     : R-caTools
 Version  : 1.17.1.2
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/caTools_1.17.1.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caTools_1.17.1.2.tar.gz
-Summary  : Tools: moving window statistics, GIF, Base64, ROC AUC, etc.
+Summary  : Moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-caTools-lib = %{version}-%{release}
 Requires: R-bitops
-Requires: R-fields
 BuildRequires : R-bitops
 BuildRequires : R-fields
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 (rolling, running) window statistic functions, read/write for
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569348986
+export SOURCE_DATE_EPOCH=1571809382
 
 %install
-export SOURCE_DATE_EPOCH=1569348986
+export SOURCE_DATE_EPOCH=1571809382
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
