@@ -4,7 +4,7 @@
 #
 Name     : R-caTools
 Version  : 1.18.0
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/caTools_1.18.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caTools_1.18.0.tar.gz
 Summary  : Moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.
