@@ -1,4 +1,2 @@
 # This file contains recursive sources that require this package
-R-PerformanceAnalytics
-R-dendextend
 R-gplots

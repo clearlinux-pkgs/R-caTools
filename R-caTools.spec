@@ -4,17 +4,15 @@
 #
 Name     : R-caTools
 Version  : 1.18.0
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/caTools_1.18.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caTools_1.18.0.tar.gz
-Summary  : Moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.
+Summary  : Tools: Moving Window Statistics, GIF, Base64, ROC AUC, etc
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-caTools-lib = %{version}-%{release}
 Requires: R-bitops
-Requires: R-fields
 BuildRequires : R-bitops
-BuildRequires : R-fields
 BuildRequires : buildreq-R
 
 %description
@@ -33,21 +31,22 @@ lib components for the R-caTools package.
 
 %prep
 %setup -q -c -n caTools
+cd %{_builddir}/caTools
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579276805
+export SOURCE_DATE_EPOCH=1589586180
 
 %install
-export SOURCE_DATE_EPOCH=1579276805
+export SOURCE_DATE_EPOCH=1589586180
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
