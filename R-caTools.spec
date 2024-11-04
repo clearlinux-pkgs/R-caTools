@@ -7,7 +7,7 @@
 #
 Name     : R-caTools
 Version  : 1.18.3
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/caTools_1.18.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caTools_1.18.3.tar.gz
 Summary  : Tools: Moving Window Statistics, GIF, Base64, ROC AUC, etc
